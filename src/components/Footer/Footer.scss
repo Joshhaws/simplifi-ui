@@ -1,0 +1,46 @@
+.main-nav {
+  padding: 25px;
+  background-color: #396379;
+  color: #F6A647;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  display: flex;
+  justify-content: space-between;
+}
+.main-nav-left {
+  display: flex;
+  align-items: center;
+}
+.main-nav-title {
+  color: #F6A647;
+  font-size: 2em;
+  text-decoration: none;
+  margin-right: 25px;
+}
+.main-nav-title:hover {
+  opacity: .75;
+}
+.main-nav-about {
+  color: #F6A647;
+  text-decoration: none;
+  margin-right: 15px;
+}
+.main-nav-about:hover {
+  opacity: .75;
+}
+.main-nav-contact {
+  color: #F6A647;
+  text-decoration: none;
+  margin-right: 5px;
+}
+.main-nav-contact:hover {
+  opacity: .75;
+}
+
+.main-nav-right {
+  display: flex;
+  align-items: center;
+}
+.nav-logo {
+  width: 50px;
+}
