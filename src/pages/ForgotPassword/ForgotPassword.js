@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import './Login.scss';
+import './ForgotPassword.scss';
 import { Link, Redirect } from 'react-router-dom';
 import axios from 'axios';
 import Dashboard from '../Dashboard/Dashboard';
 
-class Login extends Component {
+class ForgotPassword extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -47,18 +47,14 @@ class Login extends Component {
                     <div className="left-section">
                         <div className="left-section-content">
                             <div className="left-top">
-                                <div className="login-title">Login</div>
-                                <Link to="/register" className="secondary-link">Create Account</Link>
+                                <div className="login-title">Forgot Password</div>
                             </div>
                             
                             <div>
                                 <form onSubmit={this.handleSubmit}>
                                     <input type="text" className="input-field" value={this.state.username} onChange={this.handleUsernameChange}></input>
-                                    <div className="input-label">Username</div>
-                                    <input type="password" className="input-field" value={this.state.password} onChange={this.handlePasswordChange}></input>
-                                    <div className="input-label">Password</div>
-                                    <input type="submit" className="login-button" value="Login"/>
-                                    <Link to="/ForgotPassword" className="secondary-link">Forgot Password?</Link>
+                                    <div className="input-label">Email</div>
+                                    <input type="submit" className="login-button" value="Send Reset Instructions"/>
                                 </form>
                             </div>        
                         </div>
@@ -72,4 +68,4 @@ class Login extends Component {
     }
 }
 
-export default Login;
+export default ForgotPassword;

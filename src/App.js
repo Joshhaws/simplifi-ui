@@ -10,6 +10,7 @@ import Footer from './components/Footer/Footer';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import Dashboard from './pages/Dashboard/Dashboard';
+import ForgotPassword from './pages/ForgotPassword/ForgotPassword';
 
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
@@ -61,6 +62,7 @@ class App extends Component {
           <Route exact path="/Contact" component={Contact} />
           <Route exact path="/Login" component={Login} />
           <Route exact path="/Register" component={Register} />
+          <Route exact path="/ForgotPassword" component={ForgotPassword} />
           <PrivateRoute exact path="/Dashboard" component={Dashboard} />
         </Switch>
         <Footer />
