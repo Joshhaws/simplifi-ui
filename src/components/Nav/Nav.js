@@ -7,8 +7,9 @@ class Nav extends Component {
         return(
             <div className="main-nav">
                 <div className="main-nav-left">
-                    <img className="nav-logo" src="logo.svg" alt="logo" />
-                    <Link to ="/" className="main-nav-title">Command Center</Link>
+                    <Link to ="/" className="main-nav-title">
+                        <img className="nav-logo" src="logo.svg" alt="logo" />
+                    </Link>
                     <Link to="/about" className="main-nav-about">About</Link>
                     <Link to="/contact" className="main-nav-contact">Contact</Link>
                 </div>
