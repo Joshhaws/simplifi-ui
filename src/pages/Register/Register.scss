@@ -1,83 +1,132 @@
-// @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-// .register-container {
-//     margin: auto;
-//     display: flex;
-//     width: 75%;
-//     height: 70%;
-//     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-//     opacity:0;  /* make things invisible upon start */
-//     animation:fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
-//     animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-//     animation-duration:.1s;
-//     animation-delay: .1s
-// }
-// .left-section {
-//     background-color: #3577A2;
-//     width: 45%;
-//     font-family: 'Roboto', sans-serif;
-//     font-weight: 300;
-//     display: flex;
-//     justify-content: center;
-//     padding-top: 35px;
-// }
-// .right-section {
-//     background-color: #ffffff;
-//     width: 55%;
-//     color: #F6A647;
-//     font-family: 'Roboto', sans-serif;
-//     font-weight: 300;
-//     font-size: 3em;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: center;
-// }
-// .right-section-logo {
-//     width: 400px;
-// }
-// .login-title {
-//     font-size: 3em;
-//     margin-bottom: 10px;
-// }
-// .input-field {
-//     font-family: 'Roboto', sans-serif;
-//     font-weight: 300;
-//     border-radius: 5px;
-//     border: solid #396379;
-//     padding: 1em;
-//     font-size: 1em;
-//     background: #fff;
-//     box-shadow: 0px 0px 0px 2px transparent;
-//     -webkit-transition: box-shadow 0.3s;
-// 	transition: box-shadow 0.3s;
-// }
-// .input-field:focus {
-//     outline: none;
-//     box-shadow: 0px 0px 0px 2px #F6A647;
-// }
-// .input-label {
-//     padding: 5px 0px 15px;
-// }
-// .login-button {
-//     font-size: 1.2em;
-//     font-family: 'Roboto', sans-serif;
-//     font-weight: 300;
-//     border-radius: 5px;
-//     background: #383838;
-//     color: #3399DB;
-//     width: 100%;
-//     padding: 20px;
-//     margin-top: 15px;
-//     margin-bottom: 5px;
-//     cursor: pointer;
-// }
-
-// .left-top {
-//     display: flex;
-//     align-items: center;
-//     flex-direction: column;
-//     margin-bottom: 30px;
-// }
-// .secondary-link:visited {
-//     color: black;
-// }
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway');
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+.login-container {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    @media only screen and (min-width: 768px) {
+        width: 75%;
+    }
+    @media only screen and (min-width: 1024px) {
+        width: 50%;
+    }
+    width: 100%;
+    height: 70%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    opacity:0;  /* make things invisible upon start */
+    animation:fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    animation-duration:.1s;
+    animation-delay: .1s;
+    background-color: #ffffff;
+    .login-title {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        height: 50px;
+        width: 100%;
+        @media only screen and (min-width: 1024px) {
+            height: 100px;
+        }
+        img {
+            width: 150px;
+            @media only screen and (min-width: 768px) {
+                width: 100%;
+            }
+        }
+    }
+    .login-message {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 25px;
+        .welcome {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 100;
+            font-size: 28px;
+        }
+        .welcome-sub {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: 700;
+            font-family: 'Open Sans', sans-serif;
+        }
+    }
+    .login-form-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        form {
+            width: 100%;
+            font-size: 14px;
+            @media only screen and (min-width: 768px) {
+                width: 60%;
+            }
+            padding-right: 100px;
+        }
+        .email-login-input-container {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-top: 10px;
+            width: 100%;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 200;
+            .email-input-field {
+                margin-left: 15px;
+                width: 60%;
+                @media only screen and (min-width: 768px) {
+                    width: 60%;
+                }
+                @media only screen and (min-width: 1024px) {
+                    width: 70%;
+                }
+                padding: 10px;
+            }
+        }
+        .password-login-input-container {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-top: 10px;
+            width: 100%;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 200;
+            .password-input-field {
+                margin-left: 15px;
+                width: 60%;
+                @media only screen and (min-width: 768px) {
+                    width: 60%;
+                }
+                @media only screen and (min-width: 1024px) {
+                    width: 70%;
+                }
+                padding: 10px;
+            }
+        }
+        .login-button-container {
+            margin-top: 10px;
+            display: flex;
+            justify-content: flex-end;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 200;
+            .login-button {
+                background-color: #3399DB;
+                color: #ffffff;
+                font-size: 18px;
+                width: 70%;
+                @media only screen and (min-width: 768px) {
+                    width: 70%;
+                }
+                @media only screen and (min-width: 1024px) {
+                    width: 75%;
+                }
+                padding: 10px 0;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 200;
+                font-size: 14px;
+                cursor: pointer;
+            }
+        }
+    }
+}

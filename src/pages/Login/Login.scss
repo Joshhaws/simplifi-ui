@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway');
 @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 .login-container {
     margin: auto;
     display: flex;
+    flex-direction: column;
     @media only screen and (min-width: 768px) {
         width: 75%;
     }
@@ -25,12 +27,130 @@
         width: 100%;
         @media only screen and (min-width: 1024px) {
             height: 100px;
-            margin-top: 100px;
         }
         img {
             width: 150px;
             @media only screen and (min-width: 768px) {
                 width: 100%;
+            }
+        }
+    }
+    .login-message {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 25px;
+        .welcome {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 100;
+            font-size: 28px;
+        }
+        .welcome-sub {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: 700;
+            font-family: 'Open Sans', sans-serif;
+        }
+    }
+    .login-form-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+        font-family: 'Open Sans', sans-serif;
+        .form-links {
+            display: flex;
+            justify-content: space-between;
+            width: 60%;
+            .register-link {
+                color: #3399DB;
+                font-size: 12px;
+                margin-left: 75px;
+                text-decoration: underline;
+            }
+            .register-link:visited {
+                color: #3399DB;
+            }
+            .reset-link {
+                color: #3399DB;
+                font-size: 12px;
+                margin-right: 50px;
+                text-decoration: underline;
+            }
+            .reset-link:visited {
+                color: #3399DB;
+            }
+        }
+        form {
+            width: 100%;
+            font-size: 14px;
+            @media only screen and (min-width: 768px) {
+                width: 60%;
+            }
+            padding-right: 100px;
+        }
+        .email-login-input-container {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-top: 10px;
+            width: 100%;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 200;
+            .email-input-field {
+                margin-left: 15px;
+                width: 60%;
+                @media only screen and (min-width: 768px) {
+                    width: 60%;
+                }
+                @media only screen and (min-width: 1024px) {
+                    width: 70%;
+                }
+                padding: 10px;
+            }
+        }
+        .password-login-input-container {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-top: 10px;
+            width: 100%;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 200;
+            .password-input-field {
+                margin-left: 15px;
+                width: 60%;
+                @media only screen and (min-width: 768px) {
+                    width: 60%;
+                }
+                @media only screen and (min-width: 1024px) {
+                    width: 70%;
+                }
+                padding: 10px;
+            }
+        }
+        .login-button-container {
+            margin-top: 10px;
+            display: flex;
+            justify-content: flex-end;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 200;
+            .login-button {
+                background-color: #3399DB;
+                color: #ffffff;
+                font-size: 18px;
+                width: 70%;
+                @media only screen and (min-width: 768px) {
+                    width: 70%;
+                }
+                @media only screen and (min-width: 1024px) {
+                    width: 75%;
+                }
+                padding: 10px 0;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 200;
+                font-size: 14px;
+                cursor: pointer;
             }
         }
     }
