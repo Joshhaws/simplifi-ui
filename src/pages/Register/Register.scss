@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway');
 @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-.login-container {
+.register-container {
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -19,7 +19,7 @@
     animation-duration:.1s;
     animation-delay: .1s;
     background-color: #ffffff;
-    .login-title {
+    .register-title {
         margin-top: 50px;
         display: flex;
         justify-content: center;
@@ -35,7 +35,7 @@
             }
         }
     }
-    .login-message {
+    .register-message {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -52,7 +52,7 @@
             font-family: 'Open Sans', sans-serif;
         }
     }
-    .login-form-container {
+    .register-form-container {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -82,7 +82,7 @@
             }
             padding-right: 100px;
         }
-        .email-login-input-container {
+        .email-register-input-container {
             display: flex;
             justify-content: flex-end;
             align-items: center;
@@ -102,7 +102,7 @@
                 padding: 10px;
             }
         }
-        .password-login-input-container {
+        .password-register-input-container {
             display: flex;
             justify-content: flex-end;
             align-items: center;
@@ -122,13 +122,13 @@
                 padding: 10px;
             }
         }
-        .login-button-container {
+        .register-button-container {
             margin-top: 10px;
             display: flex;
             justify-content: flex-end;
             font-family: 'Open Sans', sans-serif;
             font-weight: 200;
-            .login-button {
+            .register-button {
                 background-color: #3399DB;
                 color: #ffffff;
                 font-size: 18px;
