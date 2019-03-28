@@ -8,7 +8,7 @@ class Register extends Component {
         return(
             <div className="body-content">
                 <div className="register-container">
-                    <div className="reset-title">
+                    <div className="register-title">
                         <img src="logo.svg" alt="logo" />
                     </div>
                     <div className="register-message">
