@@ -58,14 +58,16 @@
         align-items: center;
         margin-top: 50px;
         font-family: 'Open Sans', sans-serif;
-        .form-links {
+        .login-form-links {
             display: flex;
             justify-content: space-between;
             width: 60%;
             .register-link {
                 color: #3399DB;
                 font-size: 12px;
-                margin-left: 75px;
+                @media only screen and (min-width: 768px) {
+                    margin-left: 75px;
+                }
                 text-decoration: underline;
             }
             .register-link:visited {
@@ -74,7 +76,9 @@
             .reset-link {
                 color: #3399DB;
                 font-size: 12px;
-                margin-right: 50px;
+                @media only screen and (min-width: 768px) {
+                    margin-right: 50px;
+                }
                 text-decoration: underline;
             }
             .reset-link:visited {

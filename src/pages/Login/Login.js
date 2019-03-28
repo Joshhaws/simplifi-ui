@@ -16,7 +16,7 @@ class Login extends Component {
                         <div className="welcome-sub">Log in to view your stuff.</div>
                     </div>
                     <div className="login-form-container">
-                        <div className="form-links">
+                        <div className="login-form-links">
                             <Link className="register-link" to="/register">Need an Account?</Link>
                             <Link className="reset-link" to="/resetpassword">Forgot Password?</Link>
                         </div>

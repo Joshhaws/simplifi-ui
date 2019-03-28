@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './ResetPassword.scss';
-import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 class ResetPassword extends Component {
 
@@ -16,6 +16,10 @@ class ResetPassword extends Component {
                         <div className="welcome-sub">Input email for password reset.</div>
                     </div>
                     <div className="login-form-container">
+                        <div className="reset-form-links">
+                            <Link className="register-link" to="/register">Need an Account?</Link>
+                            <Link className="login-link" to="/login">Login?</Link>
+                        </div>
                         <form>
                             <div className="email-login-input-container">
                                 <div className="email-input-label">Email</div>

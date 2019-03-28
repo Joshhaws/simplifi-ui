@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Register.scss';
+import { Link } from 'react-router-dom';
 
 class Register extends Component {
 
@@ -15,6 +16,9 @@ class Register extends Component {
                         <div className="welcome-sub">Sign up for awesomeness.</div>
                     </div>
                     <div className="login-form-container">
+                        <div className="register-form-links">
+                            <Link className="login-link" to="/login">Login?</Link>
+                        </div>
                         <form>
                             <div className="email-login-input-container">
                                 <div className="email-input-label">Email</div>
