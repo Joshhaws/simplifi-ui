@@ -10,49 +10,11 @@ import Footer from './components/Footer/Footer';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import Dashboard from './pages/Dashboard/Dashboard';
-import ForgotPassword from './pages/ForgotPassword/ForgotPassword';
+import ResetPassword from './pages/ResetPassword/ResetPassword';
 
-
-const PrivateRoute = ({ component: Component, ...rest }) => (
-    <Route {...rest} render={(props) => (
-      fakeAuth.isAuthenticated === false
-        ? <Component {...props} />
-        : <Redirect to='/Login' />
-    )} />
-)
-
-const fakeAuth = {
-  isAuthenticated: false,
-  authenticate(cb) {
-    this.isAuthenticated = true
-    setTimeout(cb, 100) // fake async
-  },
-  signout(cb) {
-    this.isAuthenticated = false
-    setTimeout(cb, 100) // fake async
-  }
-}
 
 class App extends Component {
-  state = {
-    redirectToReferrer: false
-  }
-
-  login = () => {
-    fakeAuth.authenticate(() => {
-      this.setState(() => ({
-        redirectToReferrer: true
-      }))
-    })
-  }
-
   render() {
-    const { redirectToReferrer } = this.state
-
-    if (redirectToReferrer === true) {
-      return <Redirect to='/' />
-    }
-
     return (
       <div>
         <Nav />
@@ -62,8 +24,8 @@ class App extends Component {
           <Route exact path="/Contact" component={Contact} />
           <Route exact path="/Login" component={Login} />
           <Route exact path="/Register" component={Register} />
-          <Route exact path="/ForgotPassword" component={ForgotPassword} />
-          <PrivateRoute exact path="/Dashboard" component={Dashboard} />
+          <Route exact path="/ResetPassword" component={ResetPassword} />
+          <Route exact path="/Dashboard" component={Dashboard} />
         </Switch>
         <Footer />
       </div>

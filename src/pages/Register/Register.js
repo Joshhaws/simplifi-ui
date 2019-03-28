@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import './Register.scss';
 
 class Register extends Component {
-    ding(e) {
-        console.log('test');
-        e.preventDefault();
-    }
 
     render() {
         return(

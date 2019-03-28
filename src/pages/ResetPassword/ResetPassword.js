@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import './ForgotPassword.scss';
-import { Link, Redirect } from 'react-router-dom';
+import './ResetPassword.scss';
 import axios from 'axios';
-import Dashboard from '../Dashboard/Dashboard';
 
-class ForgotPassword extends Component {
+class ResetPassword extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -68,4 +66,4 @@ class ForgotPassword extends Component {
     }
 }
 
-export default ForgotPassword;
+export default ResetPassword;

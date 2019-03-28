@@ -14,8 +14,8 @@ class Nav extends Component {
                     <Link to="/contact" className="main-nav-contact">Contact</Link>
                 </div>
                 <div className="main-nav-right">
-                    <Link to="/register" className="main-nav-about">Sign Up</Link>
-                    <Link to="/login" className="main-nav-contact">Login</Link>
+                    <Link to="/register" className="main-nav-sign-up">Sign Up</Link>
+                    <Link to="/login" className="main-nav-login">Login</Link>
                 </div>
             </div>
         )
