@@ -12,12 +12,16 @@
     display: flex;
     align-items: center;
     .main-nav-title {
-        color: #3577A2;
-        font-size: 2em;
-        text-decoration: none;
         margin-right: 25px;
         display: flex;
-        align-items: center;     
+        align-items: center;
+        .nav-logo {
+            width: 100px;
+
+            @media only screen and (min-width: 768px) {
+                width: 150px;
+            }
+        }
     }
     .main-nav-title:hover {
         opacity: .75;
@@ -27,7 +31,7 @@
         text-decoration: none;
         margin-right: 15px;
         display: none;
-        @media only screen and (min-width: 1024px) {
+        @media only screen and (min-width: 768px) {
             display: block;
         }
     }
@@ -39,7 +43,7 @@
         text-decoration: none;
         margin-right: 5px;
         display: none;
-        @media only screen and (min-width: 1024px) {
+        @media only screen and (min-width: 768px) {
             display: block;
         }
     }
@@ -48,20 +52,16 @@
     }
 }
 
-
-
-
 .main-nav-right {
-    display: flex;
-    align-items: center;
+    display: none;
+    @media only screen and (min-width: 768px) {
+        display: flex;
+        align-items: center;
+    }
     .main-nav-sign-up {
         color: #3577A2;
         text-decoration: none;
         margin-right: 15px;
-        display: none;
-        @media only screen and (min-width: 1024px) {
-            display: block;
-        }
     }
     .main-nav-sign-up:hover {
         opacity: .75;
@@ -70,15 +70,8 @@
         color: #3577A2;
         text-decoration: none;
         margin-right: 5px;
-        display: none;
-        @media only screen and (min-width: 1024px) {
-            display: block;
-        }
     }
     .main-nav-login:hover {
         opacity: .75;
     }
-}
-.nav-logo {
-    width: 50px;
 }
