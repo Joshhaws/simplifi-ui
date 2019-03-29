@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.scss';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import Nav from './components/Nav/Nav';
 import Landing from './pages/Landing/Landing';
@@ -25,7 +25,7 @@ class App extends Component {
           <Route exact path="/Login" component={Login} />
           <Route exact path="/Register" component={Register} />
           <Route exact path="/ResetPassword" component={ResetPassword} />
-          <Route exact path="/Dashboard" component={Dashboard} />
+          <Route path="/Dashboard" component={Dashboard} />
         </Switch>
         <Footer />
       </div>
