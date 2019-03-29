@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway');
+@import '../../assets/scss/colors.scss';
+
 @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 .register-container {
     margin: auto;
@@ -18,7 +19,7 @@
     animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
     animation-duration:.1s;
     animation-delay: .1s;
-    background-color: #ffffff;
+    background-color: $background;
     .register-title {
         margin-top: 50px;
         display: flex;
@@ -63,7 +64,7 @@
             justify-content: flex-end;
             width: 60%;
             .login-link {
-                color: #3399DB;
+                color: $accent-3;
                 font-size: 12px;
                 @media only screen and (min-width: 768px) {
                     margin-right: 50px;
@@ -71,7 +72,7 @@
                 text-decoration: underline;
             }
             .login-link:visited {
-                color: #3399DB;
+                color: $accent-3;
             }
         }
         form {
@@ -132,8 +133,8 @@
                 margin-left: -30px;
             }
             .register-button {
-                background-color: #3399DB;
-                color: #ffffff;
+                background-color: $accent-3;
+                color: $text-light;
                 font-size: 18px;
                 width: 70%;
                 @media only screen and (min-width: 768px) {

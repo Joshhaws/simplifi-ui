@@ -1,78 +1,147 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway');
-.main-nav {
-    padding: 25px;
-    background-color: #FFFFFF;
-    color: #3577A2;
-    font-weight: 200;
-    display: flex;
-    justify-content: space-between;
-    font-family: 'Raleway', sans-serif;
-}
+@import '../../assets/scss/colors.scss';
+@import '../../assets/scss/hamburgers-settings.scss';
+@import '../../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss';
 
-.main-nav-left {
-    display: flex;
-    align-items: center;
-    .main-nav-title {
-        margin-right: 25px;
+.nav-container{
+    .main-nav {
+        padding: 25px;
+        background-color: $background;
+        color: $accent-2;
+        font-weight: 200;
         display: flex;
-        align-items: center;
-        .nav-logo {
-            width: 100px;
+        justify-content: space-between;
+        font-family: 'Raleway', sans-serif;
+        .main-nav-left {
+            display: flex;
+            align-items: center;
+            .main-nav-title {
+                margin-right: 25px;
+                display: flex;
+                align-items: center;
+                .nav-logo {        
+                    width: 150px;
+                }
+            }
+            .main-nav-title:hover {
+                opacity: .75;
+            }
+            .main-nav-about {
+                color: $accent-2;
+                text-decoration: none;
+                margin-right: 15px;
+                display: block;
+            }
+            .main-nav-about:hover {
+                opacity: .75;
+            }
+            .main-nav-contact {
+                color: $accent-2;
+                text-decoration: none;
+                margin-right: 5px;
+                display: block;
+            }
+            .main-nav-contact:hover {
+                opacity: .75;
+            }
+        }
 
-            @media only screen and (min-width: 768px) {
-                width: 150px;
+        .main-nav-right {
+            display: flex;
+            align-items: center;
+            .main-nav-sign-up {
+                color: $accent-2;
+                text-decoration: none;
+                margin-right: 15px;
+            }
+            .main-nav-sign-up:hover {
+                opacity: .75;
+            }
+            .main-nav-login {
+                color: $accent-2;
+                text-decoration: none;
+                margin-right: 5px;
+            }
+            .main-nav-login:hover {
+                opacity: .75;
             }
         }
     }
-    .main-nav-title:hover {
-        opacity: .75;
-    }
-    .main-nav-about {
-        color: #3577A2;
-        text-decoration: none;
-        margin-right: 15px;
-        display: none;
-        @media only screen and (min-width: 768px) {
-            display: block;
+    
+    $mobile-padding : 25px;
+    .mobile-nav{
+        padding: $mobile-padding;
+        background-color: $background;
+        color: $accent-2;
+        font-weight: 200;
+        display: flex;
+        justify-content: space-between;
+        font-family: 'Raleway', sans-serif;
+        width: calc(100vw - #{$mobile-padding} - #{$mobile-padding});
+        min-height: 26px;
+        &__left{
+            &-title{
+                display: flex;
+                align-items: center;
+                &-logo{
+                    width: 100px;
+                }
+            }
+        }
+        &__right{
+            display: flex;
+            flex-direction: column;
+            .hamburger{
+                position: absolute;
+                top: 14px;
+                right: 10px;
+            }
+            &-links{
+                padding: $mobile-padding;
+                width: calc(100vw - #{$mobile-padding} - #{$mobile-padding});       
+                position: absolute;
+                top: 76px;
+                left: 0px;
+                display: flex;
+                flex-direction: column;
+                background: $background;
+                border-top: 1px solid $border-dark;
+                animation: slide-down 0.4s ease;
+                z-index: 1;
+                
+                &-link{
+                    margin: 5px 0;
+                    text-decoration: none;
+                    color: $accent-1;
+                }
+                &-link:hover{
+                    color: $accent-2;
+                }
+            }
+            .closing{
+                animation: slide-up 0.4s ease;
+            }
         }
     }
-    .main-nav-about:hover {
-        opacity: .75;
-    }
-    .main-nav-contact {
-        color: #3577A2;
-        text-decoration: none;
-        margin-right: 5px;
-        display: none;
-        @media only screen and (min-width: 768px) {
-            display: block;
-        }
-    }
-    .main-nav-contact:hover {
-        opacity: .75;
-    }
+
 }
 
-.main-nav-right {
-    display: none;
-    @media only screen and (min-width: 768px) {
-        display: flex;
-        align-items: center;
+@keyframes slide-down{
+    0% {
+        opacity: 0;
+        transform: translateY(-20px)
+    }   
+    100% {
+        opacity: 1;
+        transform: translateY(0px)
     }
-    .main-nav-sign-up {
-        color: #3577A2;
-        text-decoration: none;
-        margin-right: 15px;
-    }
-    .main-nav-sign-up:hover {
-        opacity: .75;
-    }
-    .main-nav-login {
-        color: #3577A2;
-        text-decoration: none;
-        margin-right: 5px;
-    }
-    .main-nav-login:hover {
-        opacity: .75;
+}
+@keyframes slide-up{
+    0% {
+        opacity: 1;
+        transform: translateY(0px)
+    }   
+    100% {
+        opacity: 0;
+        transform: translateY(-20px)
     }
 }

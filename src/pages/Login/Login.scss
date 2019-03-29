@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway');
+@import '../../assets/scss/colors.scss';
+
 @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 .login-container {
     margin: auto;
@@ -18,7 +19,7 @@
     animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
     animation-duration:.1s;
     animation-delay: .1s;
-    background-color: #ffffff;
+    background-color: $background;
     .login-title {
         margin-top: 50px;
         display: flex;
@@ -63,7 +64,7 @@
             justify-content: space-between;
             width: 60%;
             .register-link {
-                color: #3399DB;
+                color: $accent-3;
                 font-size: 12px;
                 @media only screen and (min-width: 768px) {
                     margin-left: 75px;
@@ -71,10 +72,10 @@
                 text-decoration: underline;
             }
             .register-link:visited {
-                color: #3399DB;
+                color: $accent-3;
             }
             .reset-link {
-                color: #3399DB;
+                color: $accent-3;
                 font-size: 12px;
                 @media only screen and (min-width: 768px) {
                     margin-right: 50px;
@@ -82,7 +83,7 @@
                 text-decoration: underline;
             }
             .reset-link:visited {
-                color: #3399DB;
+                color: $accent-3;
             }
         }
         form {
@@ -140,8 +141,8 @@
             font-family: 'Open Sans', sans-serif;
             font-weight: 200;
             .login-button {
-                background-color: #3399DB;
-                color: #ffffff;
+                background-color: $accent-3;
+                color: $text-light;
                 font-size: 18px;
                 width: 70%;
                 @media only screen and (min-width: 768px) {
