@@ -19,20 +19,6 @@ class Budget extends Component {
                             amount: 150
                         }
                     ]
-                },
-                {
-                    name: 'Non-Monthly',
-                    budgets: [
-                        {
-                            name: 'prime',
-                            amount: 10
-
-                        },
-                        {
-                            name: 'insurance',
-                            amount: 200
-                        }
-                    ]
                 }
             ]
         };
@@ -43,7 +29,9 @@ class Budget extends Component {
             <div className="budget-container">
                 <div className="item budget-header">Header</div>
                 <div className="item budget-content">
-                    <div>{ this.state.categories.map(category => <div>{category.name}</div>) }</div>
+                    <div>
+                        { this.state.categories.map(category => <div>{category.name}</div>) }
+                    </div>
                 </div>
                 <div className="item budget-sidebar">Sidebar</div>
             </div>
