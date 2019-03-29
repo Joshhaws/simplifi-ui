@@ -5,7 +5,6 @@ import { Link, Route, Switch } from 'react-router-dom';
 import Budget from '../Budget/Budget';
 import Reports from '../Reports/Reports';
 import Accounts from '../Accounts/Accounts';
-import Landing from '../Landing/Landing';
 
 class Dashboard extends Component {
     render() {
@@ -19,7 +18,7 @@ class Dashboard extends Component {
                         <Link to="/Dashboard/Accounts">All Accounts</Link>
                     </div>
                     <div className="item accounts">Accounts</div>
-                    <div className="item content">
+                    <div className="item page-content">
                         <Switch>
                             <Route exact path="/Dashboard/Budget" component={Budget} />
                             <Route exact path="/Dashboard/Reports" component={Reports} />
