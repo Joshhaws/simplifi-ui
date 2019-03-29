@@ -5,7 +5,7 @@ class Accounts extends Component {
     render() {
         return(
             <div className="accounts-container">
-                <div className="item accounts-header">Header</div>
+                <div className="item accounts-header">Accounts</div>
                 <div className="item accounts-content">Content</div>
             </div>
         )

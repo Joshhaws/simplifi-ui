@@ -11,13 +11,17 @@ class Dashboard extends Component {
         return(
             <div className="body-content">
                 <div className="dashboard-container">
-                    <div className="item profile">Profile</div>
+                    <div className="item profile">
+                        <Link to="/Profile">Profile</Link>
+                    </div>
                     <div className="item nav">
                         <Link to="/Dashboard/Budget">Budget</Link>
                         <Link to="/Dashboard/Reports">Reports</Link>
                         <Link to="/Dashboard/Accounts">All Accounts</Link>
                     </div>
-                    <div className="item accounts">Accounts</div>
+                    <div className="item accounts">
+                        <div>Accounts</div>
+                    </div>
                     <div className="item page-content">
                         <Switch>
                             <Route exact path="/Dashboard/Budget" component={Budget} />

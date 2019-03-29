@@ -27,7 +27,7 @@ class Budget extends Component {
     render() {
         return(
             <div className="budget-container">
-                <div className="item budget-header">Header</div>
+                <div className="item budget-header">Budget</div>
                 <div className="item budget-content">
                     <div>
                         { this.state.categories.map(category => <div>{category.name}</div>) }
@@ -35,7 +35,7 @@ class Budget extends Component {
                 </div>
                 <div className="item budget-sidebar">Sidebar</div>
             </div>
-            
+
         )
     }
 }

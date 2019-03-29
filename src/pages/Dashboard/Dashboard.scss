@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway');
 .dashboard-container {
   width: 100%;
   display: grid;
@@ -14,32 +14,61 @@
   width: 100%;
 }
 .profile {
-  background: red;
+  font-family: 'Raleway', sans-serif;
+  color: #ffffff;
+  background: #383838;
   grid-column-start: 1;
   grid-row-start: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-bottom: 1px solid #ffffff;
+  a {
+    font-size: 22px;
+    color: #ffffff;
+    padding: 15px;
+    text-decoration: none;
+  } 
+  a:hover {
+    background-color: #91919175
+  }
 }
 .nav {
-  background: yellow;
+  font-family: 'Raleway', sans-serif;
+  color: #ffffff;
+  background: #383838;
   grid-column-start: 1;
   grid-row-start: 2;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
   a {
+    font-size: 18px;
+    color: #ffffff;
     padding: 15px;
     text-decoration: none;
   }
   a:hover {
-    background: pink;
+    background-color: #91919175
   }
 }
+
+
 .accounts {
-  background: green;
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  color: #ffffff;
+  background: #383838;
   grid-column-start: 1;
   grid-row-start: 3;
+  border-top: 1px solid #ffffff;
+  div {
+    padding: 15px;
+  }
 }
 .page-content {
-  background: cyan;
   grid-row-start: 1;
   grid-row-end: 4;
   grid-column-start: 2;

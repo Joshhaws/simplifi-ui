@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway');
 .reports-container {
   width: 100%;
   height: 100%;
@@ -10,21 +11,26 @@
   width: 100%;
 }
 .reports-header {
-  background: magenta;
+  font-family: 'Raleway', sans-serif;
+  background: #383838;
+  color: #ffffff;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  font-weight: 100px;
   grid-row-start: 1;
   grid-column-start: 1;
   grid-column-end: 3;
 }
 
 .reports-content {
-  background: maroon;
   grid-row-start: 2;
   grid-column-start: 1;
   grid-column-end: 2;
 }
 
 .reports-sidebar {
-  background: cyan;
+  background: #3399DB;
   grid-row-start: 2;
   grid-column-start: 2;
   grid-column-end: 3;
