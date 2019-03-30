@@ -1,0 +1,26 @@
+import React, { Component } from 'react';
+import './Category.scss';
+
+class Category extends Component {
+  constructor(props) {
+    super(props);
+  
+    this.state = {
+      category: props.categoryObject
+    }
+  }
+
+  render() {
+      return(
+       <div className="category-item">
+         {/* <div className="category-item" onClick={() => this.selectCategory('friggin groceries')}> */}
+          <div className="category-title">{this.state.category.name}</div>
+          <div className="category-budgeted">{this.state.category.budgeted}</div>
+          <div className="category-activity">{this.state.category.activity}</div>
+          <div className="category-available">{this.state.category.available}</div>
+        </div>
+      )
+  }
+}
+
+export default Category;

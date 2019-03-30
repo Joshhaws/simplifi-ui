@@ -1,0 +1,23 @@
+@import '../../assets/scss/colors.scss';
+
+.category-group-title-container {
+  display: flex;
+  padding: 13px;
+  background-color: $accent-3;
+  cursor: pointer;
+  .category-group-title {
+    width: 40%;
+  }
+  .category-group-budgeted {
+    width: 20%;
+  }
+  .category-group-activity {
+    width: 20%;
+  }
+  .category-group-available {
+    width: 20%;
+  }
+}
+.category-group-title-container:hover {
+  background-color: $accent-2;
+}
