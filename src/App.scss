@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway');
-
+@import './assets//scss/colors.scss';
 .body-content {
   width: 100%;
-  height: 800px;
+  height: calc(100vh - 91px - 68px); // view height minus header and footer heights to make it fit all screen sizes
   display: flex;
   background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
   // font-family: 'Raleway', sans-serif;

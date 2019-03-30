@@ -1,7 +1,12 @@
+@import '../../assets/scss/colors.scss';
+
+.footer-nav{
+  padding: 35px;
+}
 // .main-nav {
 //   padding: 25px;
-//   background-color: #FFFFFF;
-//   color: #3577A2;
+//   background-color: $background;
+//   color: $accent-2;
 //   font-family: 'Roboto', sans-serif;
 //   font-weight: 300;
 //   display: flex;
@@ -12,7 +17,7 @@
 //   align-items: center;
 // }
 // .main-nav-title {
-//   color: #3577A2;
+//   color: $accent-2;
 //   font-size: 2em;
 //   text-decoration: none;
 //   margin-right: 25px;
@@ -23,7 +28,7 @@
 //   opacity: .75;
 // }
 // .main-nav-about {
-//   color: #3577A2;
+//   color: $accent-2;
 //   text-decoration: none;
 //   margin-right: 15px;
 // }
@@ -31,7 +36,7 @@
 //   opacity: .75;
 // }
 // .main-nav-contact {
-//   color: #3577A2;
+//   color: $accent-2;
 //   text-decoration: none;
 //   margin-right: 5px;
 // }
