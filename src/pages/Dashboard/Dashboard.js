@@ -1,12 +1,21 @@
 import React, { Component } from 'react';
 import './Dashboard.scss';
 import { Link, Route, Switch } from 'react-router-dom';
+import PlaidLink from 'react-plaid-link';
 
 import Budget from '../Budget/Budget';
 import Reports from '../Reports/Reports';
 import Accounts from '../Accounts/Accounts';
 
 class Dashboard extends Component {
+    handleOnSuccess(token, metadata) {
+        console.log('success ya nerd');
+        // send token to client server
+    }
+    handleOnExit() {
+        console.log('exit ya nerd');
+        // handle the case when your user exits Link
+    }
     render() {
         return(
             <div className="body-content">
@@ -21,6 +30,17 @@ class Dashboard extends Component {
                     </div>
                     <div className="item accounts">
                         <div>Accounts</div>
+                        {/* here at simplifi we hard code our public keys, that's how we roll */}
+                        <PlaidLink
+                            clientName="Simpli to the fi"
+                            env="development"
+                            product={["transactions"]}
+                            publicKey="343927daae82a5f17369b559b66a02"
+                            onExit={this.handleOnExit}
+                            onSuccess={this.handleOnSuccess}
+                        >
+                            Connect your friggin account nerd
+                        </PlaidLink>
                     </div>
                     <div className="item page-content">
                         <Switch>
