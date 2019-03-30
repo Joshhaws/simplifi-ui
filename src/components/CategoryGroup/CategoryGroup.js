@@ -11,11 +11,15 @@ class CategoryGroup extends Component {
     }
   }
 
+  selectCategory (stuff) {
+    console.log(stuff);
+    // this should update the sidebar, not sure how to send it to that component
+  }
+
   render() {
       return(
           <div>
-            {/* <div className="category-group-title-container" onClick={() => this.selectCategory('monthly obligations')}> */}
-            <div className="category-group-title-container">
+            <div className="category-group-title-container" onClick={() => this.selectCategory(this.state.categoryGroup.name)}>
                 <div className="category-group-title">{this.state.categoryGroup.name}</div>
                 <div className="category-group-budgeted">{this.state.categoryGroup.budgeted}</div>
                 <div className="category-group-activity">{this.state.categoryGroup.activity}</div>

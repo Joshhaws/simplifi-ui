@@ -10,10 +10,14 @@ class Category extends Component {
     }
   }
 
+  selectCategory (stuff) {
+    console.log(stuff);
+    // this should update the sidebar, not sure how to send it to that component
+  }
+
   render() {
       return(
-       <div className="category-item">
-         {/* <div className="category-item" onClick={() => this.selectCategory('friggin groceries')}> */}
+        <div className="category-item" onClick={() => this.selectCategory(this.state.category.name)}>
           <div className="category-title">{this.state.category.name}</div>
           <div className="category-budgeted">{this.state.category.budgeted}</div>
           <div className="category-activity">{this.state.category.activity}</div>
