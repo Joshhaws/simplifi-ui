@@ -6,6 +6,9 @@ import PlaidLink from 'react-plaid-link';
 import Budget from '../Budget/Budget';
 import Reports from '../Reports/Reports';
 import Accounts from '../Accounts/Accounts';
+import { MdAddCircleOutline } from 'react-icons/md';
+
+
 
 class Dashboard extends Component {
     handleOnSuccess(token, metadata) {
@@ -31,15 +34,16 @@ class Dashboard extends Component {
                     <div className="item accounts">
                         <div>Accounts</div>
                         {/* here at simplifi we hard code our public keys, that's how we roll */}
-                        <PlaidLink
-                            clientName="Simpli to the fi"
+                        <PlaidLink className="plaid-button"
+                            clientName="Simplifi"
                             env="development"
                             product={["transactions"]}
                             publicKey="343927daae82a5f17369b559b66a02"
                             onExit={this.handleOnExit}
                             onSuccess={this.handleOnSuccess}
                         >
-                            Connect your friggin account nerd
+                            <MdAddCircleOutline className="plaid-button-icon"/>
+                            <span className="plaid-button-text">Add Account</span>
                         </PlaidLink>
                     </div>
                     <div className="item page-content">

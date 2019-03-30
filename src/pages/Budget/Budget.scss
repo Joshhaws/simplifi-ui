@@ -5,7 +5,7 @@
   height: 100%;
   display: grid;
   grid-template-columns: 75% 25%;
-  grid-template-rows: 10% auto;
+  grid-template-rows: 55px auto;
 }
 .item {
   height: 100%;
@@ -23,16 +23,19 @@
   grid-column-start: 1;
   grid-column-end: 3;
   padding-left: 15px;
+  border-bottom: 1px solid #ffffff;
 }
 .budget-content {
   grid-row-start: 2;
   grid-column-start: 1;
   grid-column-end: 2;
   font-family: 'Raleway', sans-serif;
+  border-top: 1px solid #ffffff;
 }
 .category-container {
   overflow-y: auto;
   height: 635px;
+  border: solid 2px #fff;
   .category-group-title-container {
     display: flex;
     padding: 13px;
@@ -83,6 +86,7 @@
 
 
 .budget-sidebar {
+  border-top: 1px solid #ffffff;
   background: $accent-3;
   grid-row-start: 2;
   grid-column-start: 2;
