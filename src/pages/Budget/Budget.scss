@@ -4,7 +4,7 @@
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: 70% 30%;
+  grid-template-columns: 75% 25%;
   grid-template-rows: 10% auto;
 }
 .item {
@@ -13,7 +13,7 @@
 }
 .budget-header {
   font-family: 'Raleway', sans-serif;
-  background: #383838;
+  background: $accent-1;
   color: $text-light;
   font-size: 24px;
   display: flex;
@@ -22,13 +22,65 @@
   grid-row-start: 1;
   grid-column-start: 1;
   grid-column-end: 3;
+  padding-left: 15px;
 }
-
 .budget-content {
   grid-row-start: 2;
   grid-column-start: 1;
   grid-column-end: 2;
+  font-family: 'Raleway', sans-serif;
 }
+.category-container {
+  overflow-y: auto;
+  height: 635px;
+  .category-group-title-container {
+    display: flex;
+    padding: 13px;
+    background-color: $accent-3;
+    cursor: pointer;
+    .category-group-title {
+      width: 40%;
+    }
+    .category-group-budgeted {
+      width: 20%;
+    }
+    .category-group-activity {
+      width: 20%;
+    }
+    .category-group-available {
+      width: 20%;
+    }
+  }
+  .category-group-title-container:hover {
+    background-color: $accent-2;
+  }
+  
+  .category-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 13px;
+    border-bottom: .5px solid $border-regular;
+    font-size: 14px;
+    cursor: pointer;
+    .category-title {
+      width: 40%;
+    }
+    .category-budgeted {
+      width: 20%;
+    }
+    .category-activity {
+      width: 20%;
+    }
+    .category-available {
+      width: 20%;
+    }
+  }
+  .budget-item:hover {
+    background-color: white;
+  }
+}
+
+
 
 .budget-sidebar {
   background: $accent-3;
