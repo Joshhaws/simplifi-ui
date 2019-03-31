@@ -44,4 +44,25 @@
   grid-row-start: 2;
   grid-column-start: 2;
   grid-column-end: 3;
+  font-family: 'Raleway', sans-serif;
+  .budget-sidebar-title {
+    padding: 13px;
+    display: flex;
+    justify-content: center;
+  }
+  .budget-sidebar-transactions-title {
+    padding: 13px;
+    display: flex;
+    justify-content: center;
+  }
+  .budget-sidebar-transactions-header {
+    display: flex;
+    padding: 5px;
+    justify-content: space-between;
+  }
+  .budget-sidebar-transaction {
+    display: flex;
+    padding: 5px;
+    justify-content: space-between;
+  }
 }

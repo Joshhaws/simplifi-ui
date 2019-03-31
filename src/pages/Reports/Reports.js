@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Doughnut } from 'react-chartjs-2';
+// import { Doughnut } from 'react-chartjs-2';
 
 import './Reports.scss';
 
@@ -30,7 +30,7 @@ class Reports extends Component {
             <div className="reports-container">
                 <div className="item reports-header">Reports</div>
                 <div className="item reports-content">
-                    <Doughnut data={data} />
+                    {/* <Doughnut data={data} /> */}
                     <div>http://gor181.github.io/react-chartjs-2/</div>
                 </div>
                 <div className="item reports-sidebar">Sidebar</div>

@@ -173,9 +173,21 @@ class Budget extends Component {
                         { this.state.category_groups.map(category_group => <CategoryGroup group={category_group} />) }
                     </div>
                 </div>
-                <div className="item budget-sidebar">{this.state.sidebar}</div>
+                <div className="item budget-sidebar">
+                    <div className="budget-sidebar-title">Budget Title</div>
+                    <div className="budget-sidebar-transactions-title">Recent Transactions</div>
+                    <div className="budget-sidebar-transactions-header">
+                        <div>Date</div>
+                        <div>Payee</div>
+                        <div>Amount</div>
+                    </div>
+                    <div className="budget-sidebar-transaction">
+                        <div>10/4</div>
+                        <div>McDonalds</div>
+                        <div>6.43</div>
+                    </div>
+                </div>
             </div>
-
         )
     }
 }
