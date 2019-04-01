@@ -27,6 +27,7 @@ class Budget extends Component {
                 budgeted: 4000,
                 activity: 2500,
                 available: 1500,
+                transactions: []
             },
             category_groups: [
                 {
@@ -39,31 +40,146 @@ class Budget extends Component {
                             name: 'Groceries',
                             budgeted: 500,
                             activity: 300,
-                            available: 200
+                            available: 200,
+                            transactions: [
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                }
+                            ]
                         },
                         {
                             name: 'Groceries',
                             budgeted: 500,
                             activity: 300,
-                            available: 200
+                            available: 200,
+                            transactions: [
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                }
+                            ]
                         },
                         {
                             name: 'Groceries',
                             budgeted: 500,
                             activity: 300,
-                            available: 200
+                            available: 200,
+                            transactions: [
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                }
+                            ]
                         },
                         {
                             name: 'Groceries',
                             budgeted: 500,
                             activity: 300,
-                            available: 200
+                            available: 200,
+                            transactions: [
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                }
+                            ]
                         },
                         {
                             name: 'Groceries',
                             budgeted: 500,
                             activity: 300,
-                            available: 200
+                            available: 200,
+                            transactions: [
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                }
+                            ]
                         }
                     ]
                 },
@@ -77,31 +193,166 @@ class Budget extends Component {
                             name: 'Groceries',
                             budgeted: 500,
                             activity: 300,
-                            available: 200
+                            available: 200,
+                            transactions: [
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                }
+                            ]
                         },
                         {
                             name: 'Groceries',
                             budgeted: 500,
                             activity: 300,
-                            available: 200
+                            available: 200,
+                            transactions: [
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                }
+                            ]
                         },
                         {
                             name: 'Groceries',
                             budgeted: 500,
                             activity: 300,
-                            available: 200
+                            available: 200,
+                            transactions: [
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                }
+                            ]
                         },
                         {
                             name: 'Groceries',
                             budgeted: 500,
                             activity: 300,
-                            available: 200
+                            available: 200,
+                            transactions: [
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                }
+                            ]
                         },
                         {
                             name: 'Groceries',
                             budgeted: 500,
                             activity: 300,
-                            available: 200
+                            available: 200,
+                            transactions: [
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                }
+                            ]
                         }
                     ]
                 },
@@ -115,31 +366,166 @@ class Budget extends Component {
                             name: 'Groceries',
                             budgeted: 500,
                             activity: 300,
-                            available: 200
+                            available: 200,
+                            transactions: [
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                }
+                            ]
                         },
                         {
                             name: 'Groceries',
                             budgeted: 500,
                             activity: 300,
-                            available: 200
+                            available: 200,
+                            transactions: [
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                }
+                            ]
                         },
                         {
                             name: 'Groceries',
                             budgeted: 500,
                             activity: 300,
-                            available: 200
+                            available: 200,
+                            transactions: [
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                }
+                            ]
                         },
                         {
                             name: 'Groceries',
                             budgeted: 500,
                             activity: 300,
-                            available: 200
+                            available: 200,
+                            transactions: [
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                }
+                            ]
                         },
                         {
                             name: 'Groceries',
                             budgeted: 500,
                             activity: 300,
-                            available: 200
+                            available: 200,
+                            transactions: [
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                }
+                            ]
                         }
                     ]
                 },
@@ -153,31 +539,166 @@ class Budget extends Component {
                             name: 'Groceries',
                             budgeted: 500,
                             activity: 300,
-                            available: 200
+                            available: 200,
+                            transactions: [
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                }
+                            ]
                         },
                         {
                             name: 'Groceries',
                             budgeted: 500,
                             activity: 300,
-                            available: 200
+                            available: 200,
+                            transactions: [
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                }
+                            ]
                         },
                         {
                             name: 'Groceries',
                             budgeted: 500,
                             activity: 300,
-                            available: 200
+                            available: 200,
+                            transactions: [
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                }
+                            ]
                         },
                         {
                             name: 'Groceries',
                             budgeted: 500,
                             activity: 300,
-                            available: 200
+                            available: 200,
+                            transactions: [
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                }
+                            ]
                         },
                         {
                             name: 'Groceries',
                             budgeted: 500,
                             activity: 300,
-                            available: 200
+                            available: 200,
+                            transactions: [
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                },
+                                {
+                                    date: '10/4',
+                                    payee: 'Mcdonalds',
+                                    amount: 789
+                                }
+                            ]
                         }
                     ]
                 }
@@ -203,7 +724,8 @@ class Budget extends Component {
                 name: selected.name,
                 budgeted: selected.budgeted,
                 activity: selected.activity,
-                available: selected.available
+                available: selected.available,
+                transactions: selected.transactions
             }
         });
     }
@@ -226,17 +748,22 @@ class Budget extends Component {
                             options={this.state.sidebarOptions}
                         />
                     </div>
-                    <div className="budget-sidebar-transactions-title">Recent Transactions</div>
-                    <div className="budget-sidebar-transactions-header">
-                        <div>Date</div>
-                        <div>Payee</div>
-                        <div>Amount</div>
+                    <div className="budget-sidebar-transactions-container">
+                        <div className="budget-sidebar-transactions-title">Recent Transactions</div>
+                        <div className="budget-sidebar-transactions-header">
+                            <div>Date</div>
+                            <div>Payee</div>
+                            <div>Amount</div>
+                        </div>
+                        { this.state.selected.transactions.map(transaction => 
+                            <div className="budget-sidebar-transaction">
+                            <div>{transaction.date}</div>
+                            <div>{transaction.payee}</div>
+                            <div>{transaction.amount}</div>
+                        </div>
+                        )}
                     </div>
-                    <div className="budget-sidebar-transaction">
-                        <div>10/4</div>
-                        <div>McDonalds</div>
-                        <div>6.43</div>
-                    </div>
+                    
                 </div>
             </div>
         )
