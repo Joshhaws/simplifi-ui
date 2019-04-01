@@ -54,19 +54,29 @@
     display: flex;
     justify-content: center
   }
-  .budget-sidebar-transactions-title {
-    padding: 13px;
-    display: flex;
-    justify-content: center;
-  }
-  .budget-sidebar-transactions-header {
-    display: flex;
-    padding: 5px;
-    justify-content: space-between;
-  }
-  .budget-sidebar-transaction {
-    display: flex;
-    padding: 5px;
-    justify-content: space-between;
+  .budget-sidebar-transactions-container {
+    margin-top: 35px;
+    padding: 10px;
+    .budget-sidebar-transactions-title {
+      padding: 13px;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+    .budget-sidebar-transactions-header {
+      display: flex;
+      padding: 5px;
+      justify-content: space-between;
+      border-bottom: solid 1px $border-light;
+      margin-bottom: 10px;
+    }
+    .budget-sidebar-transaction {
+      display: flex;
+      padding: 5px;
+      justify-content: space-between;
+    }
+    .no-transactions {
+      font-style: italic;
+    }
   }
 }
