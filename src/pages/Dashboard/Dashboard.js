@@ -11,6 +11,17 @@ import { MdAddCircleOutline } from 'react-icons/md';
 
 
 class Dashboard extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            accounts: [
+                {
+                    name: 'ally',
+                    balance: 1000
+                }
+            ]
+        };
+    }
     handleOnSuccess(token, metadata) {
         console.log('success ya nerd');
         // send token to client server
@@ -32,8 +43,17 @@ class Dashboard extends Component {
                         <Link to="/Dashboard/Accounts">All Accounts</Link>
                     </div>
                     <div className="item accounts">
-                        <div>Accounts</div>
-                        {/* here at simplifi we hard code our public keys, that's how we roll */}
+                        <div className="accounts-header">Accounts</div>
+                        <div className="accounts-sidebar-container">
+                            {
+                                this.state.accounts.length > 0 ? this.state.accounts.map(account => 
+                                    <Link to="/Dashboard/Accounts" className="account-container">
+                                        <div className="account-name">{account.name}</div>
+                                        <div className="account-balance">{account.balance}</div>
+                                    </Link>
+                                ) : <div className="no-accounts">No accounts synced</div>
+                            }
+                        </div>
                         <PlaidLink className="plaid-button"
                             clientName="Simplifi"
                             env="development"

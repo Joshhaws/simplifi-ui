@@ -65,13 +65,34 @@
   grid-column-start: 1;
   grid-row-start: 3;
   border-top: 1px solid $border-light;
-  div {
+  .accounts-header {
     padding: 15px;
+  }
+  .accounts-sidebar-container {
+    margin-bottom: 15px;
+    .no-accounts {
+      padding: 15px;
+      font-size: 14px;
+      font-style: italic;
+    }
+    .account-container {
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      text-decoration: none;
+      color: #ffffff;
+    }
+    .account-container:hover {
+      background-color: #91919175;
+      cursor: pointer;
+    }
   }
   .plaid-button {
     cursor: pointer;
     display: flex;
     align-items: center;
+    margin-left: 15px;
     padding: 8px 15px !important;
     border-radius: 30px !important;
     background-color: $accent-1 !important;
