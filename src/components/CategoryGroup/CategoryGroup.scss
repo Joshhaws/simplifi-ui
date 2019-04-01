@@ -1,0 +1,47 @@
+@import '../../assets/scss/colors.scss';
+
+.category-group-title-container {
+  display: flex;
+  padding: 13px;
+  background-color: $accent-3;
+  cursor: pointer;
+  .category-group-title {
+    width: 40%;
+  }
+  .category-group-budgeted {
+    width: 20%;
+  }
+  .category-group-activity {
+    width: 20%;
+  }
+  .category-group-available {
+    width: 20%;
+  }
+}
+.category-group-title-container:hover {
+  background-color: $accent-2;
+}
+
+.category-item {	
+  display: flex;	
+  justify-content: space-between;	
+  padding: 10px 13px;	
+  border-bottom: .5px solid $border-regular;	
+  font-size: 14px;	
+  cursor: pointer;	
+  .category-title {	
+    width: 40%;	
+  }	
+  .category-budgeted {	
+    width: 20%;	
+  }	
+  .category-activity {	
+    width: 20%;	
+  }	
+  .category-available {	
+    width: 20%;	
+  }	
+}	
+.category-item:hover {	
+  background-color: white;	
+} 

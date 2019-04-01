@@ -11,6 +11,7 @@ import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import Dashboard from './pages/Dashboard/Dashboard';
 import ResetPassword from './pages/ResetPassword/ResetPassword';
+import Profile from './pages/Profile/Profile';
 
 
 class App extends Component {
@@ -26,6 +27,7 @@ class App extends Component {
           <Route exact path="/Register" component={Register} />
           <Route exact path="/ResetPassword" component={ResetPassword} />
           <Route path="/Dashboard" component={Dashboard} />
+          <Route exact path="/Profile" component={Profile} />
         </Switch>
         <Footer />
       </div>
