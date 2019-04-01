@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './CategoryGroup.scss';
-import Category from '../Category/Category';
 
 class CategoryGroup extends Component {
   constructor(props) {
@@ -31,7 +30,7 @@ class CategoryGroup extends Component {
                 <div className="category-budgeted">{category.budgeted}</div>
                 <div className="category-activity">{category.activity}</div>
                 <div className="category-available">{category.available}</div>
-              </div>
+              </div>  
             )}
             
           </div>
