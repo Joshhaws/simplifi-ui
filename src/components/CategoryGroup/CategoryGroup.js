@@ -25,7 +25,15 @@ class CategoryGroup extends Component {
                 <div className="category-group-activity">{this.state.categoryGroup.activity}</div>
                 <div className="category-group-available">{this.state.categoryGroup.available}</div>
             </div>
-            { this.state.categoryGroup.categories.map(category => <Category categoryObject={category} />) }
+            { this.state.categoryGroup.categories.map(category => 
+              <div className="category-item" onClick={() => this.selectCategory(category.name)}>
+                <div className="category-title">{category.name}</div>
+                <div className="category-budgeted">{category.budgeted}</div>
+                <div className="category-activity">{category.activity}</div>
+                <div className="category-available">{category.available}</div>
+              </div>
+            )}
+            
           </div>
       )
   }
