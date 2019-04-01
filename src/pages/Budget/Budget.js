@@ -3,32 +3,31 @@ import './Budget.scss';
 import CategoryGroup from '../../components/CategoryGroup/CategoryGroup';
 import { Doughnut } from 'react-chartjs-2';
 
-
-const data = {
-    datasets: [{
-        data: [900, 400],
-        backgroundColor: [
-            '#3ec556',
-            "rgba(0,0,0,0)",
-        ],
-        backgroundColor: [
-            '#3ec556',
-            "rgba(0,0,0,0)",
-        ],
-        borderWidth: [
-            0, 0
-        ]
-    }]
-};
-
-const options = {
-    cutoutPercentage: 80,
-}
-  
 class Budget extends Component {
     constructor(props) {	
         super(props);
         this.state = {
+            sidebarData: {
+                datasets: [{
+                    data: [900, 400],
+                    backgroundColor: [
+                        '#3ec556',
+                        "rgba(0,0,0,0)",
+                    ],
+                    borderWidth: [
+                        0, 0
+                    ]
+                }]
+            },
+            sidebarOptions: {
+                cutoutPercentage: 80,
+            },
+            selected: {
+                name: 'test',
+                budgeted: 4000,
+                activity: 2500,
+                available: 1500,
+            },
             category_groups: [
                 {
                     name: 'Monthly Obligations',
@@ -69,9 +68,9 @@ class Budget extends Component {
                     ]
                 },
                 {
-                    name: 'Monthly Obligations',
+                    name: 'Non-Monthly',
                     budgeted: 4000,
-                    activity: 2500,
+                    activity: 3500,
                     available: 1500,
                     categories: [
                         {
@@ -107,10 +106,10 @@ class Budget extends Component {
                     ]
                 },
                 {
-                    name: 'Monthly Obligations',
+                    name: 'The Future (Goals)',
                     budgeted: 4000,
                     activity: 2500,
-                    available: 1500,
+                    available: 1100,
                     categories: [
                         {
                             name: 'Groceries',
@@ -145,10 +144,10 @@ class Budget extends Component {
                     ]
                 },
                 {
-                    name: 'Monthly Obligations',
+                    name: 'The Future (Long Term Saving)',
                     budgeted: 4000,
-                    activity: 2500,
-                    available: 1500,
+                    activity: 500,
+                    available: 175,
                     categories: [
                         {
                             name: 'Groceries',
@@ -185,6 +184,29 @@ class Budget extends Component {
             ]	
         };	
     }
+
+    selectCategory(selected) {
+        this.setState({
+            sidebarData: {
+                datasets: [{
+                    data: [selected.available, selected.activity],
+                    backgroundColor: [
+                        '#3ec556',
+                        "rgba(0,0,0,0)",
+                    ],
+                    borderWidth: [
+                        0, 0
+                    ]
+                }]
+            },
+            selected: {
+                name: selected.name,
+                budgeted: selected.budgeted,
+                activity: selected.activity,
+                available: selected.available
+            }
+        });
+    }
     
     render() {
         return(
@@ -192,16 +214,16 @@ class Budget extends Component {
                 <div className="item budget-header">Budget</div>
                 <div className="item budget-content">
                     <div className="category-container">
-                        { this.state.category_groups.map(category_group => <CategoryGroup group={category_group} />) }
+                        { this.state.category_groups.map(category_group => <CategoryGroup selectCategory={this.selectCategory.bind(this)} group={category_group} />) }
                     </div>
                 </div>
                 <div className="item budget-sidebar">
-                    <div className="budget-sidebar-title">Budget Title</div>
+                    <div className="budget-sidebar-title">{this.state.selected.name}</div>
                     <div className="arc-series-container">
                         <Doughnut 
-                            data={data} 
+                            data={this.state.sidebarData} 
                             border-width={0}
-                            options={options}
+                            options={this.state.sidebarOptions}
                         />
                     </div>
                     <div className="budget-sidebar-transactions-title">Recent Transactions</div>
