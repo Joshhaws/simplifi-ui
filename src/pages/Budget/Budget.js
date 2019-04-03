@@ -802,6 +802,7 @@ class Budget extends Component {
     // single category will show you information for that category
     // wondering if data should all get pulled in one initial call - or how to breakdown api calls
     selectCategory(selected) {
+        console.log('fire it up');
         this.setState({
             sidebarData: {
                 datasets: [{
