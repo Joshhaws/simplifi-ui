@@ -34,7 +34,7 @@ class Login extends Component {
             return this.setState({ error: 'Password is required' });
         }
         
-        axios.post('http://localhost:4000/api/users/sign_in', { headers: {'Content-Type': 'application/json'}, "email":this.state.email, "password":this.state.password })
+        axios.post('http://localhost:4000/api/users/sign_in', { headers: {'Content-Type': 'application/json'}, "email": this.state.email, "password": this.state.password })
             .then(res => {
                 this.props.history.push("/dashboard/budget");
             });
