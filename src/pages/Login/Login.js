@@ -1,54 +1,58 @@
 import React, { Component } from 'react';
 import './Login.scss';
 import { Link } from 'react-router-dom';
+import AuthService from '../../Services/AuthService';
 
-import axios from 'axios';
 
 class Login extends Component {
-    constructor() {
-        super();
-        this.state = {
-            email: '',
-            password: '',
-            error: '',
-        };
 
-        this.handlePassChange = this.handlePassChange.bind(this);
-        this.handleUserChange = this.handleUserChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-        this.dismissError = this.dismissError.bind(this);
-    }
+    state = {
+        email: '',
+        password: '',
+        error: '',
+        loading : false
+    };
 
-    dismissError() {
+    dismissError = () => {
         this.setState({ error: '' });
     }
     
-    handleSubmit(evt) {
+    handleSubmit = (evt) => {
         evt.preventDefault();
 
-        if (!this.state.email) {
+        const { email, password } = this.state
+        
+
+        if (!email) {
             return this.setState({ error: 'Email is required' });
         }
 
-        if (!this.state.password) {
+        if (!password) {
             return this.setState({ error: 'Password is required' });
         }
-        
-        axios.post('http://localhost:4000/api/users/sign_in', { headers: {'Content-Type': 'application/json'}, "email": this.state.email, "password": this.state.password })
-            .then(res => {
-                this.props.history.push("/dashboard/budget");
-            });
-
-        return this.setState({ error: '' });
+        this.setState({ loading : true })
+        AuthService.login(email, password).then(response => {
+            if(response.status === 200){
+                this.setState({ loading : false }, () => {
+                    this.props.history.push("/dashboard/budget");
+                })
+            }
+            else{
+                return this.setState({ 
+                    error : 'Invalid Username or Password dingus.',
+                    loading : false
+                })
+            }
+        })
     }
 
-    handleUserChange(evt) {
+    handleUserChange = (evt) => {
         this.setState({
             email: evt.target.value,
         });
     };
 
-    handlePassChange(evt) {
+    handlePassChange = (evt) => {
         this.setState({
             password: evt.target.value,
         });
