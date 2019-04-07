@@ -1,18 +1,18 @@
 import axios from 'axios'
 
 let helpers = {
-  login : () => {
-    axios.post(
+  login : (email, password) => {
+    return axios.post(
       `${process.env.REACT_APP_API}/api/users/sign_in`,
        { headers: 
         {
           'Content-Type': 'application/json'
         }, 
-        "email": this.state.email,
-        "password": this.state.password 
+        "email": email,
+        "password": password 
       })
       .then(res => {
-        return res
+        return res;
       });
   }
 }

@@ -10,12 +10,19 @@ class CategoryGroup extends Component {
     }
   }
 
-  selectCategory (stuff) {
-    console.log(stuff);
-    // this should update the sidebar, not sure how to send it to that component
+  createCategoryDisplay = () => {
+    return this.state.categoryGroup.categories.map(category => 
+      <div className="category-item" onClick={() => this.props.selectCategory(category)}>
+        <div className="category-title">{category.name}</div>
+        <div className="category-budgeted">{category.budgeted}</div>
+        <div className="category-activity">{category.activity}</div>
+        <div className="category-available">{category.available}</div>
+      </div>
+    )
   }
 
   render() {
+    let createCategoryDisplay = this.createCategoryDisplay();
       return(
           <div>
             <div className="category-group-title-container" onClick={() => this.props.selectCategory(this.state.categoryGroup)}>
@@ -24,15 +31,7 @@ class CategoryGroup extends Component {
                 <div className="category-group-activity">{this.state.categoryGroup.activity}</div>
                 <div className="category-group-available">{this.state.categoryGroup.available}</div>
             </div>
-            { this.state.categoryGroup.categories.map(category => 
-              <div className="category-item" onClick={() => this.props.selectCategory(category)}>
-                <div className="category-title">{category.name}</div>
-                <div className="category-budgeted">{category.budgeted}</div>
-                <div className="category-activity">{category.activity}</div>
-                <div className="category-available">{category.available}</div>
-              </div>
-            )}
-            
+            { createCategoryDisplay }
           </div>
       )
   }
