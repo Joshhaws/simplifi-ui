@@ -28,4 +28,12 @@
   grid-row-start: 2;
   grid-column-start: 1;
   grid-column-end: 3;
+  .transaction-item {
+    display: flex;
+    padding: 5px;
+    justify-content: space-between;
+  }
+  .transaction-item:hover {
+    background-color: white;
+  }
 }
