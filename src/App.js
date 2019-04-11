@@ -19,7 +19,7 @@ class App extends Component {
     return (
       <div>
         <Nav />
-        <Switch> {/* This is a new thing in React 16 I believe. It is a little better for memory/time I think (just a switch statement) */}
+        <Switch>
           <Route exact path="/" component={Landing} />
           <Route exact path="/About" component={About} />
           <Route exact path="/Contact" component={Contact} />

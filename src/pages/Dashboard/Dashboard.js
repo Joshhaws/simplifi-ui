@@ -7,6 +7,7 @@ import Budget from '../Budget/Budget';
 import Reports from '../Reports/Reports';
 import Accounts from '../Accounts/Accounts';
 import { MdAddCircleOutline } from 'react-icons/md';
+import PlaidService from '../../Services/PlaidService';
 
 
 
@@ -23,8 +24,29 @@ class Dashboard extends Component {
         };
     }
     handleOnSuccess(token, metadata) {
-        console.log('success ya nerd');
+        // console.log(token);
+        // console.log(metadata);
+        // console.log('success ya nerd');
+        PlaidService.get_access_token(token).then(response => {
+            if(response.status === 200) {
+                console.log(response);
+            }
+            else {
+                return this.setState({ 
+                    error : 'some plaid error.',
+                    loading : false
+                })
+            }
+        })
         // send token to client server
+        // on succces we get back public token from plaid
+        // when we get public token we then send it to plaid
+        // plaid will send back an access token
+        // also will return item id
+        
+        // /item/public_token/exchange -- to exchange public for access token
+
+        // function to make api call to plaid
     }
     handleOnExit() {
         console.log('exit ya nerd');
@@ -56,7 +78,7 @@ class Dashboard extends Component {
                         </div>
                         <PlaidLink className="plaid-button"
                             clientName="Simplifi"
-                            env="development"
+                            env="sandbox"
                             product={["transactions"]}
                             publicKey="343927daae82a5f17369b559b66a02"
                             onExit={this.handleOnExit}

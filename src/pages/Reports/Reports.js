@@ -14,10 +14,6 @@ const data = {
             '#FF6384',
             "rgba(0,0,0,0)",
         ],
-        backgroundColor: [
-            '#FF6384',
-            "rgba(0,0,0,0)",
-        ],
         borderWidth: [
             0, 0
         ]
