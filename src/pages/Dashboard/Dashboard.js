@@ -27,7 +27,7 @@ class Dashboard extends Component {
         // console.log(token);
         // console.log(metadata);
         // console.log('success ya nerd');
-        PlaidService.get_access_token(token).then(response => {
+        PlaidService.get_access_token(token, metadata).then(response => {
             if(response.status === 200) {
                 console.log(response);
             }
