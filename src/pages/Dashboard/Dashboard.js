@@ -81,6 +81,7 @@ class Dashboard extends Component {
                             env="sandbox"
                             product={["transactions"]}
                             publicKey="343927daae82a5f17369b559b66a02"
+                            webhook="https://webhooks.test.com"
                             onExit={this.handleOnExit}
                             onSuccess={this.handleOnSuccess}
                         >
