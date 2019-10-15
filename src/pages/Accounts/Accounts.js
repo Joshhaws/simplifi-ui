@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Accounts.scss';
+import Loading from '../../components/Loading/Loading';
 
 class Accounts extends Component {
     constructor(props) {
@@ -7,6 +8,7 @@ class Accounts extends Component {
 
         // this should take the parameter of what is selected and query the transactions for that account(s)
         this.state = {
+            loading: true,
             accountTransactions: [
                 {
                     payee: 'place',
@@ -47,7 +49,20 @@ class Accounts extends Component {
         };
     }
 
+    componentDidMount() {
+        setTimeout(() => {
+            this.setState(() => ({loading:false}))
+        }, 1000)
+    }
+
     render() {
+        const { loading } = this.state
+
+
+        if (loading === true) {
+          return(<Loading />)
+        }
+  
         return(
             <div className="accounts-container">
                 <div className="item accounts-header">Accounts</div>

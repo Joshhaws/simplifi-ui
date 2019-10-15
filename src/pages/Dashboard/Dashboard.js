@@ -8,22 +8,22 @@ import Reports from '../Reports/Reports';
 import Accounts from '../Accounts/Accounts';
 import { MdAddCircleOutline } from 'react-icons/md';
 import PlaidService from '../../Services/PlaidService';
-import BeatLoader from 'react-spinners/BeatLoader';
+import Loading from '../../components/Loading/Loading'
 
 
 class Dashboard extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            loading: true,
-            accounts: [
-                {
-                    name: 'ally',
-                    balance: 1000
-                }
-            ]
-        };
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      loading: true,
+      accounts: [
+          {
+            name: 'ally',
+            balance: 1000
+          }
+      ]
+    };
+  }
     handleOnSuccess(token, metadata) {
         // console.log(token);
         // console.log(metadata);
@@ -53,63 +53,65 @@ class Dashboard extends Component {
         console.log('exit ya nerd');
         // handle the case when your user exits Link
     }
+    componentDidMount() {
+      setTimeout(() => { 
+        this.setState(() => ({loading: false}))
+      }, 1000)
+    }
     render() {
-        return(
-            <div className="body-content">
-                <div className="loading">
-                    <BeatLoader
-                        sizeUnit={"px"}
-                        size={100}
-                        color={'#3577a2'}
-                        loading={this.state.loading}
-                    />
-                </div>
-                
-                
-                {/* <div className="dashboard-container">
-                    <div className="item profile">
-                        <Link to="/Profile">Profile</Link>
-                    </div>
-                    <div className="item nav">
-                        <Link to="/Dashboard/Budget">Budget</Link>
-                        <Link to="/Dashboard/Reports">Reports</Link>
-                        <Link to="/Dashboard/Accounts">All Accounts</Link>
-                    </div>
-                    <div className="item accounts">
-                        <div className="accounts-header">Accounts</div>
-                        <div className="accounts-sidebar-container">
-                            {
-                                this.state.accounts.length > 0 ? this.state.accounts.map(account => 
-                                    <Link to="/Dashboard/Accounts" className="account-container">
-                                        <div className="account-name">{account.name}</div>
-                                        <div className="account-balance">{account.balance}</div>
-                                    </Link>
-                                ) : <div className="no-accounts">No accounts synced</div>
-                            }
-                        </div>
-                        <PlaidLink className="plaid-button"
-                            clientName="Simplifi"
-                            env="sandbox"
-                            product={["transactions"]}
-                            publicKey="343927daae82a5f17369b559b66a02"
-                            webhook="https://webhooks.test.com"
-                            onExit={this.handleOnExit}
-                            onSuccess={this.handleOnSuccess}
-                        >
-                            <MdAddCircleOutline className="plaid-button-icon"/>
-                            <span className="plaid-button-text">Add Account</span>
-                        </PlaidLink>
-                    </div>
-                    <div className="item page-content">
-                        <Switch>
-                            <Route exact path="/Dashboard/Budget" component={Budget} />
-                            <Route exact path="/Dashboard/Reports" component={Reports} />
-                            <Route exact path="/Dashboard/Accounts" component={Accounts} />
-                        </Switch>
-                    </div>
-                </div> */}
+      const { loading } = this.state
+
+
+      if (loading === true) {
+        return(<Loading />)
+      }
+
+      return(
+        <div className="body-content">
+          <div className="dashboard-container">
+            <div className="item profile">
+              <Link to="/Profile">Profile</Link>
             </div>
-        )
+            <div className="item nav">
+              <Link to="/Dashboard/Budget">Budget</Link>
+              <Link to="/Dashboard/Reports">Reports</Link>
+              <Link to="/Dashboard/Accounts">All Accounts</Link>
+            </div>
+            <div className="item accounts">
+              <div className="accounts-header">Accounts</div>
+              <div className="accounts-sidebar-container">
+                {
+                  this.state.accounts.length > 0 ? this.state.accounts.map(account => 
+                    <Link to="/Dashboard/Accounts" className="account-container">
+                      <div className="account-name">{account.name}</div>
+                      <div className="account-balance">{account.balance}</div>
+                    </Link>
+                  ) : <div className="no-accounts">No accounts synced</div>
+                }
+              </div>
+              <PlaidLink className="plaid-button"
+                clientName="Simplifi"
+                env="sandbox"
+                product={["transactions"]}
+                publicKey="343927daae82a5f17369b559b66a02"
+                webhook="https://webhooks.test.com"
+                onExit={this.handleOnExit}
+                onSuccess={this.handleOnSuccess}
+              >
+                <MdAddCircleOutline className="plaid-button-icon"/>
+                <span className="plaid-button-text">Add Account</span>
+              </PlaidLink>
+            </div>
+            <div className="item page-content">
+              <Switch>
+                <Route exact path="/Dashboard/Budget" component={Budget} />
+                <Route exact path="/Dashboard/Reports" component={Reports} />
+                <Route exact path="/Dashboard/Accounts" component={Accounts} />
+              </Switch>
+            </div>
+          </div>
+        </div>
+      )
     }
 }
 

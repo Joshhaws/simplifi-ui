@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Budget.scss';
 import CategoryGroup from '../../components/CategoryGroup/CategoryGroup';
 import { Doughnut } from 'react-chartjs-2';
+import Loading from '../../components/Loading/Loading'
 
 class Budget extends Component {
     constructor(props) {	
@@ -9,6 +10,7 @@ class Budget extends Component {
         // this is mock data and this will eventually be populated with api call, good to work through this and figure out what we need to make
         // api response reflec this
         this.state = {
+            loading: true,
             sidebarData: {
                 datasets: [{
                     data: [900, 400],
@@ -825,7 +827,19 @@ class Budget extends Component {
         });
     }
     
+    componentDidMount() {
+        setTimeout(() => { 
+          this.setState(() => ({loading: false}))
+        }, 1000)
+      }
+
     render() {
+        const { loading } = this.state
+
+        if (loading === true) {
+            return(<Loading />)
+        }
+
         return(
             <div className="budget-container">
                 <div className="item budget-header">Budget</div>
