@@ -27,7 +27,7 @@ class Dashboard extends Component {
         // console.log(token);
         // console.log(metadata);
         // console.log('success ya nerd');
-        PlaidService.get_access_token(token).then(response => {
+        PlaidService.get_access_token(token, metadata).then(response => {
             if(response.status === 200) {
                 console.log(response);
             }
@@ -81,6 +81,7 @@ class Dashboard extends Component {
                             env="sandbox"
                             product={["transactions"]}
                             publicKey="343927daae82a5f17369b559b66a02"
+                            webhook="https://webhooks.test.com"
                             onExit={this.handleOnExit}
                             onSuccess={this.handleOnSuccess}
                         >
