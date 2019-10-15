@@ -141,6 +141,7 @@
             font-family: 'Open Sans', sans-serif;
             font-weight: 200;
             .login-button {
+                border: none;
                 background-color: $accent-3;
                 color: $text-light;
                 font-size: 18px;
@@ -156,6 +157,9 @@
                 font-weight: 200;
                 font-size: 14px;
                 cursor: pointer;
+                &:hover {
+                    opacity: .9;
+                }
             }
         }
     }
