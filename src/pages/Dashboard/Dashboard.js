@@ -8,13 +8,14 @@ import Reports from '../Reports/Reports';
 import Accounts from '../Accounts/Accounts';
 import { MdAddCircleOutline } from 'react-icons/md';
 import PlaidService from '../../Services/PlaidService';
-
+import BeatLoader from 'react-spinners/BeatLoader';
 
 
 class Dashboard extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            loading: true,
             accounts: [
                 {
                     name: 'ally',
@@ -55,7 +56,17 @@ class Dashboard extends Component {
     render() {
         return(
             <div className="body-content">
-                <div className="dashboard-container">
+                <div className="loading">
+                    <BeatLoader
+                        sizeUnit={"px"}
+                        size={100}
+                        color={'#3577a2'}
+                        loading={this.state.loading}
+                    />
+                </div>
+                
+                
+                {/* <div className="dashboard-container">
                     <div className="item profile">
                         <Link to="/Profile">Profile</Link>
                     </div>
@@ -96,7 +107,7 @@ class Dashboard extends Component {
                             <Route exact path="/Dashboard/Accounts" component={Accounts} />
                         </Switch>
                     </div>
-                </div>
+                </div> */}
             </div>
         )
     }
