@@ -6,10 +6,8 @@ class Footer extends Component {
     render(){
         return(
             <div className="footer-nav">
-                <div className="footer-nav__left">
-                    <Link to="/about" className="main-nav-about">About</Link>
-                    <Link to="/contact" className="main-nav-contact">Contact</Link>
-                </div>
+                <Link to="/about" className="footer-nav-item">About</Link>
+                <Link to="/contact" className="footer-nav-item">Contact</Link>
             </div>
         )
     }
