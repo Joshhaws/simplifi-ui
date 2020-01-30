@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Budget.scss';
 import CategoryGroup from '../../components/CategoryGroup/CategoryGroup';
 import { Doughnut } from 'react-chartjs-2';
-import Loading from '../../components/Loading/Loading'
+import Loading from '../../components/Loading/Loading';
 
 class Budget extends Component {
     constructor(props) {	
